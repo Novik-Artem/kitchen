@@ -27,11 +27,17 @@ export default {
 </script>
 
 <style lang="scss" module>
+body {
+  margin: 0;
+}
 .app {
+  padding: 1rem;
   display: flex;
   justify-content: space-between;
+  background-color: #dfad49;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   .button {
-    background-color: #daacac;
+    background-color: #966709da;
     color: #fff;
     cursor: pointer;
     border: none;

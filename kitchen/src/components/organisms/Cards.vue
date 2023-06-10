@@ -7,6 +7,8 @@
         :image="item.image"
         :title="item.title"
         :ingredients="item.ingredients"
+        :id="item.id"
+        :isOpen="item.isOpen"
       />
     </div>
   </div>
