@@ -6,7 +6,7 @@ import burger from "../assets/dishes/burger.jpeg";
 import rolls from "../assets/dishes/rolls.jpg";
 import pasta from "../assets/dishes/pasta.jpeg";
 import draniki from "../assets/dishes/draniki.jpg";
-import ceasar from "../assets/dishes/ceasar.jpg";
+import caesar from "../assets/dishes/ceasar.jpg";
 import steak from "../assets/dishes/steak.jpg";
 ////////////////
 import nori from "../assets/ingredients/nori.webp";
@@ -37,6 +37,7 @@ export default new Vuex.Store({
         id: uuidv4(),
         title: "pizza",
         image: pizza,
+        isOpen: false,
         ingredients: [
           "dough",
           "sauce",
@@ -51,6 +52,7 @@ export default new Vuex.Store({
         id: uuidv4(),
         title: "burger",
         image: burger,
+        isOpen: false,
         ingredients: [
           "white bread",
           "sauce",
@@ -64,24 +66,28 @@ export default new Vuex.Store({
         id: uuidv4(),
         title: "rolls",
         image: rolls,
+        isOpen: false,
         ingredients: ["nori", "fish", "avocado", "cucumbers", "rice"],
       },
       {
         id: uuidv4(),
         title: "pasta",
         image: pasta,
+        isOpen: false,
         ingredients: ["pasta", "cheese", "sauce"],
       },
       {
         id: uuidv4(),
         title: "draniki",
         image: draniki,
+        isOpen: false,
         ingredients: ["potato", "sauce", "green onion"],
       },
       {
         id: uuidv4(),
-        title: "ceasar",
-        image: ceasar,
+        title: "caesar",
+        image: caesar,
+        isOpen: false,
         ingredients: [
           "chicken",
           "tomatoes",
@@ -95,6 +101,7 @@ export default new Vuex.Store({
         id: uuidv4(),
         title: "steak",
         image: steak,
+        isOpen: false,
         ingredients: ["meat", "sauce", "green onion"],
       },
     ],
@@ -249,6 +256,13 @@ export default new Vuex.Store({
         count = 0;
       }
       //state.cards = state.neededCards;
+    },
+    openMenu(state, id) {
+      state.cards.map((item) => {
+        if (item.id === id) {
+          item.isOpen = !item.isOpen;
+        }
+      });
     },
   },
   actions: {},

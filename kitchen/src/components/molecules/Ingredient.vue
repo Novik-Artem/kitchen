@@ -13,9 +13,8 @@
 </template>
 
 <script>
-import { mapGetters, mapMutations } from "vuex";
+import { mapMutations } from "vuex";
 export default {
-  computed: mapGetters(["getIsChosen"]),
   methods: {
     ...mapMutations(["chooseCard"]),
     choose() {
@@ -33,12 +32,12 @@ export default {
 
 <style lang="scss" module>
 .chosenCard {
-  border: 0.2rem solid yellow !important;
+  border: 0.2rem solid #473002da !important;
 }
 .card {
   max-width: 12rem;
   border-radius: 0.5rem;
-  background-color: #daacac;
+  background-color: #966709da;
   border: 0.2rem solid transparent;
   .image {
     height: 5rem;
@@ -52,6 +51,7 @@ export default {
     padding: 0.5rem;
     color: #fff;
     font-size: 1.1rem;
+    text-align: center;
   }
 }
 </style>
